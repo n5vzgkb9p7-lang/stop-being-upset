@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>❤️</title>
+
+<style>
+body{
+background:#102542;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial, sans-serif;
+overflow:hidden;
+color:white;
+text-align:center;
+margin:0;
+}
+
+#container{
+max-width:500px;
+padding:20px;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+margin:15px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+transition:.2s;
+}
+
+#yes{
+background:#4CAF50;
+color:white;
+}
+
+#no{
+background:#ff4d4d;
+color:white;
+position:absolute;
+}
+
+#message{
+display:none;
+font-size:22px;
+line-height:1.7;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="question">
+
+<h1>🥺 Hey [dahvie my baby]...<br>Stop being upset?</h1>
+
+<button id="yes">Yes 😊</button>
+
+<button id="no">No 😒</button>
+
+</div>
+
+<div id="message">
+
+<h1>❤️ Good. 😊 ❤️</h1>
+
+<p>
+
+I know things aren't easy right now, and I know I can't fix them.
+
+<br><br>
+
+I just wanted to steal one tiny smile from you tonight.
+
+<br><br>
+
+And yes... I know I'm extra. 😂
+<br>
+Extra for you. 😗❤️
+
+<br><br>
+
+Be happy, my perfect boy. 🌸❤️
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+let count = 0;
+
+function move(){
+
+let x=Math.random()*(window.innerWidth-120);
+
+let y=Math.random()*(window.innerHeight-60);
+
+no.style.left=x+"px";
+no.style.top=y+"px";
+
+count++;
+
+if(count===5){
+alert("😂 Oga, just press Yes abeg.");
+}
+
+}
+
+no.addEventListener("mouseover",move);
+no.addEventListener("touchstart",move);
+
+document.getElementById("yes").onclick=function(){
+
+document.getElementById("question").style.display="none";
+document.getElementById("message").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
